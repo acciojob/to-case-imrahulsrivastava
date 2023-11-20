@@ -2,11 +2,11 @@ function toCase(text) {
   // write your code here
 
   if (text === null || text.trim() === "") {
-    return "";
+    return "-";
   }
 
   const str = text.split("");
-  
+
   for (let i = 0; i < str.length; i++) {
     if (str[i] === " ") {
       str.splice(i, 1);
