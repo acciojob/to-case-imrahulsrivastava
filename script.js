@@ -5,7 +5,15 @@ function toCase(text) {
     return "";
   }
 
-  const filteredText = text.split(" ").join("").toLowerCase();
+  const str = text.split("");
+  
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === " ") {
+      str.splice(i, 1);
+    }
+  }
+
+  const filteredText = str.join("").toLowerCase();
   const result = `${filteredText}-${filteredText.toUpperCase()}`;
 
   return result;
